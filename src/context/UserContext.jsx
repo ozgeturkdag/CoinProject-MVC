@@ -19,11 +19,8 @@ export const UserProvider = ({ children }) => {
   }, []);
 
   const signUser = (newUser) => {
-    // kullanıcıya id ekler
     newUser.id = v4();
-    // kullanıcıyı lokale'e aktarır
     localStorage.setItem("user", JSON.stringify(newUser));
-    // state'i günceller
     setUser(newUser);
   };
 

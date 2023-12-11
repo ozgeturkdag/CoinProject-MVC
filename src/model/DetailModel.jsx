@@ -7,41 +7,39 @@ export class InfoLabel {
   constructor(coin, history) {
     this.coin = coin;
 
-    // arayüz kutuları için veriyi hazırla
     this.infoFields = [
       {
         icon: <SiCoinmarketcap />,
-        label: "Market Hacmi",
+        label: "Market Volume",
         value: this.coin?.marketCapUsd,
       },
       {
-        icon: <MdEventAvailable />, // Supply için bir icon ekleyebilirsiniz
+        icon: <MdEventAvailable />,
         label: "Supply",
         value: this.coin?.supply,
       },
       {
-        icon: <MdPriceChange />, // Price için bir icon ekleyebilirsiniz
-        label: "Fiyat (USD)",
+        icon: <MdPriceChange />,
+        label: "Price (USD)",
         value: this.coin?.priceUsd,
       },
       {
-        icon: <FaPercent />, // 24 saatlik değişim için bir icon ekleyebilirsiniz
-        label: "24 Saatlik Değişim (%)",
+        icon: <FaPercent />,
+        label: "24-Hour Change (%)",
         value: this.coin?.changePercent24Hr,
       },
       {
-        icon: <RiStockFill />, // 24 saatlik hacim için bir icon ekleyebilirsiniz
-        label: "24 Saatlik Hacim (USD)",
+        icon: <RiStockFill />,
+        label: "24-Hour Volume (USD)",
         value: this.coin?.volumeUsd24Hr,
       },
     ];
 
-    // grafik için veriyi hazırla
     this.chartData = {
       labels: history?.map((i) => new Date(i.date).toLocaleDateString()),
       datasets: [
         {
-          label: "Fiyat Değeri",
+          label: "Price Value",
           data: history?.map((i) => Number(i.priceUsd).toFixed(2)),
         },
       ],

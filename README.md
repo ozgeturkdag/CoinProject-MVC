@@ -1,6 +1,6 @@
 # React + Vite
 
-# CoinProject-MVC
+# Coin Project-MVC
 
 ## Libraries I used in this project:
 

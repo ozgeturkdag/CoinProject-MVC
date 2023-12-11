@@ -11,14 +11,12 @@ const MainPageController = () => {
   const page = params.get("page");
 
   useEffect(() => {
-    // ilgili sayfanın verilerini çekme
     axios
       .get(`/?limit=15&offset=${page}`)
       .then((res) => setCoins([...coins, ...res.data.data]));
   }, [params]);
 
   useEffect(() => {
-    // eğer url'de sayfa parametresi yoksa 1 olarak ekle
     if (page != 1) {
       setParams({ page: "1" });
       return;
