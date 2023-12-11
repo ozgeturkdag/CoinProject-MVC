@@ -1,5 +1,7 @@
 # React + Vite
 
+# CoinProject-MVC
+
 ## Libraries I used in this project:
 
 - formik
@@ -13,4 +15,7 @@
 - chart.js
 - react-chartjs-2
 - react-icons
-# CoinProject-MVC
+
+## Screen
+
+![](screen.gif)
